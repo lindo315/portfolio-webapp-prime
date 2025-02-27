@@ -132,15 +132,19 @@ export function Hero() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <Button className="bg-transparent hover:bg-[#64FFDA]/10 text-[#64FFDA] border-2 border-[#64FFDA] px-8 py-6">
-            Check out my work <ArrowRight className="ml-2" />
-          </Button>
-          <Button
-            variant="outline"
-            className="bg-[#112240] hover:bg-[#233554] text-[#CCD6F6] border-[#233554] px-8 py-6"
-          >
-            Download Resume
-          </Button>
+          <a href="#projects">
+            <Button className="bg-transparent hover:bg-[#64FFDA]/10 text-[#64FFDA] border-2 border-[#64FFDA] px-8 py-6">
+              Check out my work <ArrowRight className="ml-2" />
+            </Button>
+          </a>
+          <a href="/Lindo_Dlamini_Resume.pdf" download>
+            <Button
+              variant="outline"
+              className="bg-[#112240] hover:bg-[#233554] text-[#CCD6F6] border-[#233554] px-8 py-6"
+            >
+              Download Resume
+            </Button>
+          </a>
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex gap-6 mt-12">
