@@ -12,9 +12,9 @@ import {
 // Extended timeline data with more details
 const timeline = [
   {
-    date: "2023 - Present",
+    date: "2025 - Present",
     title: "Junior Web Developer",
-    company: "TechNova Solutions",
+    company: "Freelance",
     location: "Johannesburg, South Africa",
     description:
       "Working on full-stack web applications using modern technologies including React, Node.js, and PostgreSQL.",
@@ -26,6 +26,22 @@ const timeline = [
     ],
     type: "work",
     icon: Briefcase,
+  },
+  {
+    date: "2024",
+    title: "Digital Arts Degree",
+    company: "University of the Witswatersrand",
+    location: "Johannesburg, South Africa",
+    description:
+      "Graduated with honors, specialized in web technologies and software development.",
+    details: [
+      "Graduated with First Class Honors (GPA: 3.8/4.0)",
+      "Final year project: Developed a machine learning-powered recommendation system",
+      "Specialized in web development, data structures, and algorithms",
+      "Active member of the university's Computer Science Society",
+    ],
+    type: "education",
+    icon: GraduationCap,
   },
   {
     date: "2022 - 2023",
@@ -42,22 +58,6 @@ const timeline = [
     ],
     type: "work",
     icon: Briefcase,
-  },
-  {
-    date: "2021",
-    title: "Computer Science Degree",
-    company: "University of Cape Town",
-    location: "Cape Town, South Africa",
-    description:
-      "Graduated with honors, specialized in web technologies and software development.",
-    details: [
-      "Graduated with First Class Honors (GPA: 3.8/4.0)",
-      "Final year project: Developed a machine learning-powered recommendation system",
-      "Specialized in web development, data structures, and algorithms",
-      "Active member of the university's Computer Science Society",
-    ],
-    type: "education",
-    icon: GraduationCap,
   },
   {
     date: "2021",

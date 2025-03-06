@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Instagram } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function Hero() {
@@ -149,28 +149,28 @@ export function Hero() {
 
         <motion.div variants={itemVariants} className="flex gap-6 mt-12">
           <motion.a
-            href="#"
+            href="https://github.com/lindo315"
             whileHover={{ y: -5, color: "#64FFDA" }}
             className="text-[#8892B0] hover:text-[#64FFDA] transition-colors"
           >
             <Github size={24} />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://www.linkedin.com/in/lindokuhle-dlamini-211271263/"
             whileHover={{ y: -5, color: "#64FFDA" }}
             className="text-[#8892B0] hover:text-[#64FFDA] transition-colors"
           >
             <Linkedin size={24} />
           </motion.a>
           <motion.a
-            href="#"
+            href="https://www.instagram.com/lindo.315/"
             whileHover={{ y: -5, color: "#64FFDA" }}
             className="text-[#8892B0] hover:text-[#64FFDA] transition-colors"
           >
-            <Twitter size={24} />
+            <Instagram size={24} />
           </motion.a>
           <motion.a
-            href="#"
+            href="lindodlamini315@gmail.com"
             whileHover={{ y: -5, color: "#64FFDA" }}
             className="text-[#8892B0] hover:text-[#64FFDA] transition-colors"
           >
