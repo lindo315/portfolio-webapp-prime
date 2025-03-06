@@ -31,7 +31,7 @@ export default defineConfig({
   },
   root: __dirname, // Set the root to the current directory
   build: {
-    outDir: path.resolve(__dirname, "dist"), // Set the output directory to "dist"
+    outDir: ".", // Output to the root directory
     emptyOutDir: true,
   },
 });

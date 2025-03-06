@@ -41,9 +41,11 @@ var vite_config_default = defineConfig({
       "@shared": path.resolve(__dirname2, "shared")
     }
   },
-  root: path.resolve(__dirname2, "client"),
+  root: __dirname2,
+  // Set the root to the current directory
   build: {
-    outDir: path.resolve(__dirname2, "dist/public"),
+    outDir: path.resolve(__dirname2, "dist"),
+    // Set the output directory to "dist"
     emptyOutDir: true
   }
 });
