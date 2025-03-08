@@ -22,7 +22,7 @@ export function Navigation() {
     >
       <nav className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" className="text-[#64FFDA] font-mono text-xl">
-          JD
+          _lindo.dev
         </a>
 
         {/* Desktop Navigation */}

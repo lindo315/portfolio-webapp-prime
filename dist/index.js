@@ -41,12 +41,16 @@ var vite_config_default = defineConfig({
       "@shared": path.resolve(__dirname2, "shared")
     }
   },
-  root: path.resolve(__dirname2, "public"),
-  // Set the root to the public directory
+  root: __dirname2,
+  // Set the root to the current directory
   build: {
     outDir: path.resolve(__dirname2, "dist"),
     // Set the output directory to "dist"
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      input: path.resolve(__dirname2, "index.html")
+      // Ensure the input is set to the root index.html
+    }
   },
   base: "/portfolio-webapp-prime/"
   // Ensure the base option starts with a slash

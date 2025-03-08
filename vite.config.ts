@@ -29,10 +29,19 @@ export default defineConfig({
       "@shared": path.resolve(__dirname, "shared"),
     },
   },
-  root: path.resolve(__dirname, "public"), // Set the root to the public directory
+  root: __dirname,
+  publicDir: path.resolve(__dirname, "public"),
   build: {
-    outDir: path.resolve(__dirname, "dist"), // Set the output directory to "dist"
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
   },
-  base: "/portfolio-webapp-prime/", // Ensure the base option starts with a slash
+  base: "/",
+  server: {
+    port: 3000,
+    middlewareMode: true,
+    fs: {
+      strict: false,
+      allow: [path.resolve(__dirname)],
+    },
+  },
 });

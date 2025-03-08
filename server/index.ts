@@ -4,7 +4,7 @@ import { setupVite, serveStatic, log } from "./vite";
 import path from "path";
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -57,13 +57,13 @@ app.use((req, res, next) => {
   } else {
     // Serve static files in production
     serveStatic(app);
-    app.use(express.static(path.join(__dirname, "../client/dist")));
+    app.use(express.static(path.join(__dirname, "../dist"))); // Update the path to the dist directory
     app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname, "../client/dist/index.html"));
+      res.sendFile(path.join(__dirname, "../dist/index.html")); // Update the path to the index.html file
     });
   }
 
-  // Serve the app on port 4000
+  // Serve the app on port 4001
   server.listen(
     {
       port: PORT,

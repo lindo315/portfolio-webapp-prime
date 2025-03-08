@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 export function SocialLinks() {
   const socials = [
-    { icon: Github, href: "https://github.com" },
-    { icon: Linkedin, href: "https://linkedin.com" },
-    { icon: Twitter, href: "https://twitter.com" }
+    { icon: Github, href: "https://github.com/lindo315" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/lindokuhle-dlamini-211271263/",
+    },
+    { icon: Instagram, href: "https://www.instagram.com/lindo.315/" },
   ];
 
   return (
-    <motion.div 
+    <motion.div
       className="fixed left-8 bottom-0 hidden md:block"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
