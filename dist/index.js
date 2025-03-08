@@ -42,18 +42,20 @@ var vite_config_default = defineConfig({
     }
   },
   root: __dirname2,
-  // Set the root to the current directory
+  publicDir: path.resolve(__dirname2, "public"),
   build: {
     outDir: path.resolve(__dirname2, "dist"),
-    // Set the output directory to "dist"
-    emptyOutDir: true,
-    rollupOptions: {
-      input: path.resolve(__dirname2, "index.html")
-      // Ensure the input is set to the root index.html
-    }
+    emptyOutDir: true
   },
-  base: "/portfolio-webapp-prime/"
-  // Ensure the base option starts with a slash
+  base: "/",
+  server: {
+    port: 3e3,
+    middlewareMode: true,
+    fs: {
+      strict: false,
+      allow: [path.resolve(__dirname2)]
+    }
+  }
 });
 
 // server/vite.ts
@@ -87,25 +89,22 @@ async function setupVite(app2, server) {
       }
     },
     server: serverOptions,
-    appType: "custom"
+    appType: "custom",
+    root: path2.resolve(__dirname3, "..")
+    // Set root to project root
   });
   app2.use(vite.middlewares);
   app2.use("*", async (req, res, next) => {
     const url = req.originalUrl;
     try {
-      const clientTemplate = path2.resolve(
-        __dirname3,
-        "..",
-        "client",
-        "index.html"
+      const template = path2.resolve(__dirname3, "..", "index.html");
+      let html = await fs.promises.readFile(template, "utf-8");
+      html = html.replace(
+        'src="/client/src/main.tsx"',
+        `src="/client/src/main.tsx?v=${nanoid()}"`
       );
-      let template = await fs.promises.readFile(clientTemplate, "utf-8");
-      template = template.replace(
-        `src="/src/main.tsx"`,
-        `src="/src/main.tsx?v=${nanoid()}"`
-      );
-      const page = await vite.transformIndexHtml(url, template);
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+      const transformed = await vite.transformIndexHtml(url, html);
+      res.status(200).set({ "Content-Type": "text/html" }).end(transformed);
     } catch (e) {
       vite.ssrFixStacktrace(e);
       next(e);
@@ -113,7 +112,7 @@ async function setupVite(app2, server) {
   });
 }
 function serveStatic(app2) {
-  const distPath = path2.resolve(__dirname3, "public");
+  const distPath = path2.resolve(__dirname3, "..", "dist");
   if (!fs.existsSync(distPath)) {
     throw new Error(
       `Could not find the build directory: ${distPath}, make sure to build the client first`
@@ -128,7 +127,7 @@ function serveStatic(app2) {
 // server/index.ts
 import path3 from "path";
 var app = express2();
-var PORT = process.env.PORT || 4e3;
+var PORT = process.env.PORT || 3e3;
 app.use(express2.json());
 app.use(express2.urlencoded({ extended: false }));
 app.use((req, res, next) => {
@@ -167,9 +166,9 @@ app.use((req, res, next) => {
     await setupVite(app, server);
   } else {
     serveStatic(app);
-    app.use(express2.static(path3.join(__dirname, "../client/dist")));
+    app.use(express2.static(path3.join(__dirname, "../dist")));
     app.get("*", (req, res) => {
-      res.sendFile(path3.join(__dirname, "../client/dist/index.html"));
+      res.sendFile(path3.join(__dirname, "../dist/index.html"));
     });
   }
   server.listen(
