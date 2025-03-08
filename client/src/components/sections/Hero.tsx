@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Github, Linkedin, Instagram } from "lucide-react";
 import { useState, useEffect } from "react";
+import { useScroll } from "@/context/ScrollContext";
 
 export function Hero() {
+  const { scrollToProjects } = useScroll();
   const [text, setText] = useState("");
   const [index, setIndex] = useState(0);
   const phrases = [
@@ -113,7 +115,10 @@ export function Hero() {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <Button className="bg-transparent hover:bg-[#64FFDA]/10 text-[#64FFDA] border-2 border-[#64FFDA] px-8 py-6">
+          <Button
+            onClick={scrollToProjects}
+            className="bg-transparent hover:bg-[#64FFDA]/10 text-[#64FFDA] border-2 border-[#64FFDA] px-8 py-6"
+          >
             Check out my work <ArrowRight className="ml-2" />
           </Button>
           <Button

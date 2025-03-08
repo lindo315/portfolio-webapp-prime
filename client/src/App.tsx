@@ -4,6 +4,7 @@ import { queryClient } from "./lib/queryClient";
 import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
+import { ScrollContext } from "./context/ScrollContext";
 
 function Router() {
   return (
@@ -15,10 +16,19 @@ function Router() {
 }
 
 function App() {
+  const scrollToProjects = () => {
+    document.getElementById("projects")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
-      <Toaster />
+      <ScrollContext.Provider value={{ scrollToProjects }}>
+        <Router />
+        <Toaster />
+      </ScrollContext.Provider>
     </QueryClientProvider>
   );
 }

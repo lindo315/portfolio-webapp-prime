@@ -18,18 +18,20 @@ export function About() {
         <p>
           Hello! I'm a passionate web developer who loves creating beautiful and
           functional digital experiences. My journey in web development started
-          during my computer science studies, where I discovered my love for
-          frontend development and user experience design.
+          during my Digital Arts studies, where I discovered my love for
+          frontend development and user experience design through Interactive
+          Media.
         </p>
         <p>
-          After graduating in 2021, I immediately jumped into freelancing to
+          After graduating in 2024, I immediately jumped into freelancing to
           build a diverse portfolio while refining my skills across various
-          projects and technologies. This experience led me to my current role
-          as a Junior Web Developer where I'm part of an agile team building
-          production-level applications.
+          projects and technologies. I'm still in this phase, eager to gain as
+          much experience as an aspiring Web Developer. I work in honing my
+          skills and building small agile projects to production-level
+          applications.
         </p>
         <p>
-          I specialize in building modern web applications using React,
+          I specialize mostly in building modern web applications using React,
           TypeScript, and Node.js. I'm always eager to learn new technologies
           and improve my skills.
         </p>
@@ -59,19 +61,19 @@ export function About() {
       <div className="space-y-4">
         <p>
           When I'm not coding, you can find me contributing to open-source
-          projects, writing technical blog posts, or exploring new web
+          projects, tutoring fellow programmers on campus, or exploring new web
           technologies.
         </p>
         <p>
-          I'm an avid reader of technical books and blogs, particularly focused
+          I also like watching technical videos on YouTube, particularly focused
           on web performance optimization and design systems. I also enjoy
           attending local tech meetups and virtual conferences to connect with
           other developers.
         </p>
         <p>
-          Outside of tech, I enjoy hiking, photography, and playing the guitar -
-          activities that help me maintain a creative balance and fresh
-          perspective on problem-solving.
+          Outside of tech, I enjoy writing, reading, and on rare occasions -
+          drawing. I think these activities that help me maintain a creative
+          balance and fresh perspective on problem-solving.
         </p>
       </div>
     ),
