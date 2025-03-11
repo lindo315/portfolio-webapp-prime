@@ -51,7 +51,7 @@ const projects = [
     description:
       "Analytics dashboard for tracking social media engagement and performance metrics. Visualizes reach, engagement, and audience demographics.",
     longDescription:
-      "Designed and developed a comprehensive analytics platform that aggregates data from multiple social media platforms via their APIs. The dashboard provides actionable insights through interactive visualizations and customizable reports. Users can track metrics like reach, engagement, follower growth, and content performance over time, helping businesses optimize their social media strategy based on data-driven decisions.",
+      "COMING SOON: A comprehensive analytics platform that aggregates data from multiple social media platforms via their APIs. The dashboard provides actionable insights through interactive visualizations and customizable reports. Users can track metrics like reach, engagement, follower growth, and content performance over time, helping businesses optimize their social media strategy based on data-driven decisions.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
     technologies: [
       "Vue.js",
@@ -61,8 +61,6 @@ const projects = [
       "Twitter API",
       "Instagram API",
     ],
-    github: "https://github.com",
-    link: "https://demo.com",
     highlights: [
       "Integration with multiple social media APIs",
       "Advanced data visualization with D3.js",
@@ -75,7 +73,7 @@ const projects = [
     description:
       "Mobile-first web application for tracking workouts, nutrition, and fitness progress with personalized recommendations.",
     longDescription:
-      "Created a comprehensive fitness tracking solution that helps users monitor their workouts, nutrition, and overall progress. The app features workout planning with exercise demonstrations, calorie tracking, body measurement logging, and progress visualization. It provides personalized recommendations based on user goals and integrates with popular fitness devices via their APIs.",
+      "COMING SOON: A fitness tracking app that helps users monitor their workouts, nutrition, and overall progress. The app features workout planning with exercise demonstrations, calorie tracking, body measurement logging, and progress visualization. It provides personalized recommendations based on user goals and integrates with popular fitness devices via their APIs.",
     image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
     technologies: [
       "React Native",
@@ -85,8 +83,6 @@ const projects = [
       "Node.js",
       "Express",
     ],
-    github: "https://github.com",
-    link: "https://demo.com",
     highlights: [
       "Cross-platform mobile experience",
       "Personalized workout recommendations",
