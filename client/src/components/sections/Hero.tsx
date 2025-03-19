@@ -121,12 +121,12 @@ export function Hero() {
           >
             Check out my work <ArrowRight className="ml-2" />
           </Button>
-          <Button
+          {/* <Button
             variant="outline"
             className="bg-[#112240] hover:bg-[#233554] text-[#CCD6F6] border-[#233554] px-8 py-6"
           >
             Download Resume
-          </Button>
+          </Button> */}
         </motion.div>
 
         <motion.div variants={itemVariants} className="flex gap-6 mt-12">
