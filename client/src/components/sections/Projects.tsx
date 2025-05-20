@@ -76,7 +76,7 @@ const projects = [
       "Mobile-first web application for a food ordering project I'm currently working on. It's serving as a hosting site for the company and displays nicely styled information about the businesss.",
     longDescription:
       "Nutrix is a mobile-first web application designed to provide users with a seamless food ordering experience. The platform allows users to browse menus, customize orders, and make secure payments, all while enjoying an intuitive and visually appealing interface. The goal was to create a user-friendly application that enhances the online food ordering process.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+    image: "/images/nutrix.png",
     technologies: ["React Js", "Supabase", "TypeScript", "Chart.js", "Node.js"],
     github: "https://github.com",
     link: "https://nutrix-website-peach.vercel.app/",
