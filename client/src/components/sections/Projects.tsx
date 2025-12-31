@@ -7,6 +7,29 @@ import { useState } from "react";
 // Extended project data with more details
 const projects = [
   {
+    title: "Nutrix Food Delivery",
+    description:
+      "A university focused food delivery web application that allows users to order food from various restaurants and have it delivered to their location.",
+    longDescription:
+      "I developed Nutrix Food Delivery, a comprehensive web application designed to streamline the food ordering process for university students and staff. The platform allows users to browse menus from various local restaurants, customize their orders, and have their meals delivered directly to their campus or dormitory.",
+    image: "/images/nutrixapp.png",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Framer Motion",
+      "Tailwind CSS",
+      "Supabase",
+    ],
+    github: "https://github.com",
+    link: "https://nutrixeats.co.za/",
+    highlights: [
+      "User-friendly interface for easy navigation",
+      "Real-time order tracking and updates",
+      "Multiple payment options including credit card and mobile payments",
+      "Restaurant management dashboard for order processing",
+    ],
+  },
+  {
     title: "Solar System Explorer",
     description:
       "An interactive display of the solar system with detailed information on planets - which allows users to compare planets to each other based on their properties.",

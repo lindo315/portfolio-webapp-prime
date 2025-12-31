@@ -107,7 +107,7 @@ export function About() {
                     whileHover={{ opacity: 1 }}
                   />
                   <img
-                    src="/images/profile.jpeg"
+                    src="/images/profile3.jpeg"
                     alt="Profile"
                     className="w-full transition-transform duration-500 group-hover:scale-105"
                   />
